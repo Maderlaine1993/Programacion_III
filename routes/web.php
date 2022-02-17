@@ -18,4 +18,8 @@ Route::get('/', function () {
     return view('students.listar');
 });
 
+//Ruta para llegar el formulario de Estudiante
 Route::get('/form',[StudentController::class, 'studentform']);
+
+//Ruta para guardar datos del Estudiante
+Route::post('/students/studentform', [StudentController::class,'save'])->name('students.save');

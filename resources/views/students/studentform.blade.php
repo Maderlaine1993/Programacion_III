@@ -1,11 +1,21 @@
 @extends('layouts.base')
 
+
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-7 mt-5">
 
+            <!--Mensaje de Guardar-->
+            @if(session('SGuardar'))
+                <div class="alert alert-success">
+                    {{ session('SGuardar') }}
+                </div>
+            @endif
+
             <div class="card">
-                <form action ="" method="POST">
+                <form action=" {{ route('students.save')}}" method="POST">
+                    @csrf
+
                     <div class="card-header text-center"> Registrar Estudiante </div>
 
                     <div class="card-body">
@@ -40,7 +50,7 @@
                         </div>
 
                         <div class="row form group">
-                            <button type="button" class="btn btn-primary col-md-9 offset-2"> Guardar Datos </button>
+                            <button type="submit" class="btn btn-primary col-md-9 offset-2"> Guardar Datos </button>
                         </div>
                     </div>
 
