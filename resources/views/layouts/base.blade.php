@@ -27,6 +27,10 @@
         <img src="https://encuestasumgblog.files.wordpress.com/2017/04/logopngumg1.png?w=645" height="140">
     </div>
 
+    <div class="container">
+        @yield('content')
+    </div>
+
 </div>
 </body>
 </html>
