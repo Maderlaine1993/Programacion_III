@@ -7,8 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Student extends Model
 {
+
     use HasFactory;
 
-    protected $fillable = ['id', 'nombre', 'telefono', 'correo', 'jornada', 'grado'];
+    public $table='estudiantes';
+
+    public $timestamps=false;
+    protected $fillable=[
+        'id','nombre','direccion', 'telefono', 'correo','jornada','grado',
+    ];
+
+    protected $primaryKey='id';
 
 }
